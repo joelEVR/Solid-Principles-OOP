@@ -4,28 +4,31 @@ import java.util.Date;
 
 import com.algonquin.cst8288.assignment1.controller.Rate;
 
-public class PermanentEmployeeImpl implements EmployeeService, EmployeePensionService, Rate {
+public class PermanentEmployeeImpl implements PermanentEmployeeService {
 
-	public PermanentEmployeeImpl() {
-		super();	
-		}
+    private Employee employee;
+
+    public PermanentEmployeeImpl(Employee employee) {
+        this.employee = employee;
+    }
 	
+    @override
 	public double calculateTotalCompensation(Employee employee) {
-		// TODO Auto-generated method stub
-		return 0;
+    	double bonus = calculateBonus(employee);
+        return employee.getSalary() + bonus;
 	}
 	
 	@Override
 	public double pensionContribution(Employee employee) {
-		double pension = employee.getSalary() * PENSION_PERCENTAGE;
-		return pension;
-		
+        return employee.getSalary() * Rate.PENSION_PERCENTAGE;
+	}
+
+	@Override
+	public double calculateBonus(Employee employee) {
+        return employee.getSalary() * Rate.BONUS_PERCENTAGE * employee.getNumberOfServiceYear();
 	}
 
 	
-	public double calculateBonus(Employee employee) {
-		return 0;
-	}
 
 	
 }

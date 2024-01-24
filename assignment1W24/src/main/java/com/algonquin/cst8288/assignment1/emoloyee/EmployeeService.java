@@ -9,7 +9,5 @@ import java.util.Date;
  */
 
 public interface EmployeeService{
-
-	public double calculateTotalCompensation(Employee employee);
-	
+	double calculateTotalCompensation(Employee employee);	
 }
