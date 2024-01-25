@@ -8,7 +8,7 @@ public class ContractEmployeeImpl implements ContractEmployeeService {
 	private Employee employee;
 	
 	public ContractEmployeeImpl(Employee employee) {
-		this.employee =employee;
+		this.employee = employee;
 	}
 	
 	@Override

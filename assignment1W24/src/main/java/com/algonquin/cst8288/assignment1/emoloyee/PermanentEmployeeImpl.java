@@ -14,8 +14,8 @@ public class PermanentEmployeeImpl implements PermanentEmployeeService {
 	
     @override
 	public double calculateTotalCompensation(Employee employee) {
-    	double bonus = calculateBonus(employee);
-        return employee.getSalary() + bonus;
+    	employee.setTotalCompensation(employee.getSalary() + employee.getBonus());
+    	return employee.getTotalCompensation();
 	}
 	
 	@Override
@@ -25,7 +25,8 @@ public class PermanentEmployeeImpl implements PermanentEmployeeService {
 
 	@Override
 	public double calculateBonus(Employee employee) {
-        return employee.getSalary() * Rate.BONUS_PERCENTAGE * employee.getNumberOfServiceYear();
+        employee.setBonus(employee.getSalary() * Rate.BONUS_PERCENTAGE * employee.getNumberOfServiceYear());
+		return employee.getBonus();
 	}
 
 	
