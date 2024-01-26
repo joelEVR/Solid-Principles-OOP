@@ -12,14 +12,15 @@ public class ContractEmployeeImpl implements ContractEmployeeService {
 	}
 	
 	@Override
-	public double calculateTotalCompensation(Employee employee) {
-        return employee.getSalary();
+	public void calculateTotalCompensation(Employee employee) {
+        employee.setTotalCompensation(employee.getSalary());
 	}
 
 	@Override
-	public Date renewalDate() {
+	public void renewalDate(Employee employee) {
 		Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.YEAR, 1);
-        return calendar.getTime();	}
+        employee.setRenewalDate(calendar.getTime());
+	}
 	
 }

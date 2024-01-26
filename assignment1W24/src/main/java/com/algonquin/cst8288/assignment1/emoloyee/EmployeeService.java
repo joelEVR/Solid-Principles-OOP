@@ -7,5 +7,5 @@ package com.algonquin.cst8288.assignment1.emoloyee;
  */
 
 public interface EmployeeService{
-	double calculateTotalCompensation(Employee employee);	
+	void calculateTotalCompensation(Employee employee);	
 }

@@ -4,5 +4,5 @@ import java.util.Date;
 
 public interface ContractEmployeeService extends EmployeeService {
 
-	Date renewalDate();
+	void renewalDate(Employee employee);
 }

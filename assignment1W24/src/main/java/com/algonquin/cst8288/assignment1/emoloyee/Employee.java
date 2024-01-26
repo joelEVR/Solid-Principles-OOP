@@ -16,6 +16,19 @@ public class Employee {
 	public Employee() {
 		// Default constructor
 	}
+	
+	
+
+	public Employee(String name, String email, String address, double salary, int numberOfServiceYear) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.address = address;
+		this.salary = salary;
+		this.numberOfServiceYear = numberOfServiceYear;
+	}
+
+
 
 	public String getName() {
 		return name;
