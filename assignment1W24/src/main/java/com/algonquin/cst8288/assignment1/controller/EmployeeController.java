@@ -24,20 +24,16 @@ public class EmployeeController {
 
 	private EmployeeValidator validator;
 	private PersistenceService dataSaver;
-	private EmployeeProcessor processor;
 
 	 
 	 public EmployeeController(EmployeeValidator validator, PersistenceService dataSaver,EmployeeProcessor processor ) {
 	        this.validator = validator;
 	        this.dataSaver = dataSaver;
-	        this.processor = processor; 
 	    }
 
 	public String ControlEmployee(Employee employee) throws IOException {
 
-		// Process data
-		this.processor.processEmployeeData(employee);
-		
+		// Process data		
 		
 		// Validate data
 		if (!this.validator.isValidEmployee(employee)) {
