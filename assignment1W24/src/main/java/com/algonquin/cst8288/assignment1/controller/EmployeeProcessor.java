@@ -1,4 +1,7 @@
-package com.algonquin.cst8288.assignment1.emoloyee;
+package com.algonquin.cst8288.assignment1.controller;
+
+import com.algonquin.cst8288.assignment1.emoloyee.ContractEmployeeImpl;
+import com.algonquin.cst8288.assignment1.emoloyee.Employee;
 
 public class EmployeeProcessor {
 	

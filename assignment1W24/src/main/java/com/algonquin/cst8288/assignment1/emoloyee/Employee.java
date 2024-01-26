@@ -10,7 +10,6 @@ public class Employee {
 	private double salary;
 	private int numberOfServiceYear;
 	private double bonus;
-	private double pension; 
 	private double totalCompensation;
 	private Date renewalDate;
 
@@ -18,8 +17,6 @@ public class Employee {
 		// Default constructor
 	}
 	
-	
-
 	public Employee(String name, String email, String address, double salary, int numberOfServiceYear) {
 		super();
 		this.name = name;
@@ -28,8 +25,6 @@ public class Employee {
 		this.salary = salary;
 		this.numberOfServiceYear = numberOfServiceYear;
 	}
-
-
 
 	public String getName() {
 		return name;
@@ -77,10 +72,6 @@ public class Employee {
 
 	public void setBonus(double bonus) {
 		this.bonus = bonus;
-	}
-	
-	public double getPension() {
-		return pension;
 	}
 	
 	public double setPension(double pension) {

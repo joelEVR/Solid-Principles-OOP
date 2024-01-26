@@ -1,7 +1,9 @@
-package com.algonquin.cst8288.assignment1.emoloyee;
+package com.algonquin.cst8288.assignment1.controller;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import com.algonquin.cst8288.assignment1.emoloyee.Employee;
 
 public class EmployeeValidator {
 

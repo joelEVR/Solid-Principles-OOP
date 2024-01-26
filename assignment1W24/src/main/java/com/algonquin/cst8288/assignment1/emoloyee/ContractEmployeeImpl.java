@@ -1,25 +1,23 @@
 package com.algonquin.cst8288.assignment1.emoloyee;
 
 import java.util.Calendar;
-import java.util.Date;
 
-public class ContractEmployeeImpl implements ContractEmployeeService {
-	
+public class ContractEmployeeImpl extends Employee implements ContractEmployeeService {	
 
-	private Employee employee;
-	
-		
+	public ContractEmployeeImpl(String string, String string2, String string3, double d, int i) {
+		super(string, string2, string3, d, i);// TODO Auto-generated constructor stub
+	}
 	
 	@Override
-	public void calculateTotalCompensation(Employee employee) {
-        employee.setTotalCompensation(employee.getSalary());
+	public void calculateTotalCompensation( ) {
+        this.setTotalCompensation(this.getSalary());
 	}
 
 	@Override
-	public void renewalDate(Employee employee) {
+	public void renewalDate() {
 		Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.YEAR, 1);
-        employee.setRenewalDate(calendar.getTime());
+        this.setRenewalDate(calendar.getTime());
 	}
 	
 }

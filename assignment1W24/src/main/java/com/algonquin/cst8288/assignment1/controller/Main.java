@@ -1,14 +1,8 @@
 package com.algonquin.cst8288.assignment1.controller;
 
-
 import java.io.IOException;
-
 import com.algonquin.cst8288.assignment1.emoloyee.ContractEmployeeImpl;
-import com.algonquin.cst8288.assignment1.emoloyee.Employee;
-import com.algonquin.cst8288.assignment1.emoloyee.EmployeeProcessor;
-import com.algonquin.cst8288.assignment1.emoloyee.EmployeeValidator;
 import com.algonquin.cst8288.assignment1.emoloyee.PermanentEmployeeImpl;
-import com.algonquin.cst8288.assignment1.persistence.PersistenceService;
 
 /**
  * 
@@ -21,35 +15,21 @@ public class Main {
 	
 	public static void main(String[] args) throws IOException {
 				
-		// Instantiate two Employee objects and use PermanentEmployeeService.java 
-		Employee employee1 = new Employee("Joel Velasquez", "vela0063@algonquinlive.com", "10 Rue Barrete Apt 3", 11700.52, 0);
-		Employee employee2 = new Employee("Daniel Buitrago", "danbuitragoto@unal.edu.co", "calle 45c # 19 -54", 23401.04, 6);
-
+		/// Instanciar objetos Employee
+		PermanentEmployeeImpl permanentEmployee = new PermanentEmployeeImpl("Joel Velasquez", "vela0063@algonquinlive.com", "10 Rue Barrete Apt 3", 11700.52, 1);
+		permanentEmployee.calculateBonus();
+	    permanentEmployee.pensionContribution();
+	    permanentEmployee.calculateTotalCompensation();
 		
-		ContractEmployeeImpl contractemploy = new ContractEmployeeImpl();
-		PermanentEmployeeImpl permanentcontract = new PermanentEmployeeImpl();// corregir clase contratopermanente
+		ContractEmployeeImpl contractEmployee = new ContractEmployeeImpl("Daniel Buitrago", "danbuitragoto@unal.edu.co", "calle 45c # 19 -54", 23401.04, 6);
+		contractEmployee.renewalDate();
+		contractEmployee.calculateTotalCompensation();
 		
-		//todo
-		// crear objeto validador
-		// crear objeto data saver
-		// crear objeto procesador
-		
-		
-		
-		EmployeeController controlador = new EmployeeController(validator,  dataSaver,  processor);
-		
-		controlador.ControlEmployee(employee1, contractemploy); // que emepleado y que contrato
-		
-		
-		
-
-		 
-
-
+	
 		// String proccessEmployee(Employee employee) throws IOException {
 			
-		 System.out.println(employee1);
-		 System.out.println(employee2);
+		 System.out.println(permanentEmployee);
+		 System.out.println(contractEmployee);
 
 		
 		// and ContractEmployeeService.java to calculate and populate required data for objects

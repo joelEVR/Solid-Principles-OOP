@@ -4,14 +4,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import com.algonquin.cst8288.assignment1.emoloyee.ContractEmployeeImpl;
 import com.algonquin.cst8288.assignment1.emoloyee.Employee;
-import com.algonquin.cst8288.assignment1.emoloyee.EmployeeProcessor;
-import com.algonquin.cst8288.assignment1.emoloyee.EmployeeValidator;
-import com.algonquin.cst8288.assignment1.persistence.Formatter;
-import com.algonquin.cst8288.assignment1.persistence.JSONFormatter;
 import com.algonquin.cst8288.assignment1.persistence.PersistenceService;
 
 /**
@@ -20,13 +14,13 @@ import com.algonquin.cst8288.assignment1.persistence.PersistenceService;
  * 
  * 
  */
-
 public class EmployeeController {
 
 	private EmployeeValidator validator;
 	private PersistenceService dataSaver;
 	private EmployeeProcessor processor;
 
+	
 	 
 	 public EmployeeController(EmployeeValidator validator, PersistenceService dataSaver, EmployeeProcessor processor) {
 	        this.validator = validator;
@@ -34,20 +28,21 @@ public class EmployeeController {
 	        this.processor = processor;
 	    }
 
-	public String ControlEmployee(Employee employee, ContractEmployeeImpl contract) throws IOException {
+	public String ControlEmployee() throws IOException {
 
 		// Process data		
-		this.processor.processEmployeeData(employee,contract);
+		this.processor.processEmployeeData();
 
 		
 		// Validate data
-		if (!this.validator.isValidEmployee(employee)) {
+		if (!this.validator.isValidEmployee()) {
 			return "FALIED";
 		}
 		
 		// Store data
-		this.dataSaver.saveEmployee(employee, "employee_data.txt");
+		this.dataSaver.saveEmployee();
 		return "SUCCESS";
 	}
 
-}
+		
+	}
