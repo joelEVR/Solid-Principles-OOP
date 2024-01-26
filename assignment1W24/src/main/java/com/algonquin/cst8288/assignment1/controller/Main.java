@@ -29,11 +29,16 @@ public class Main {
 		 contract1.calculateTotalCompensation(employee1);
 		 contract1.renewalDate(employee1);
 		 
+		 permanent1.calculateBonus(employee2);
+		 permanent1.pensionContribution(employee2);
 		 permanent1.calculateTotalCompensation(employee2);
-		 permanent1.calculateBonus(employee1);
+
+
 		// String proccessEmployee(Employee employee) throws IOException {
 			
 		 System.out.println(employee1);
+		 System.out.println(employee2);
+
 		
 		// and ContractEmployeeService.java to calculate and populate required data for objects
 		// Utilize EmployeeController.java to save both objects in JSON and Text formats, 

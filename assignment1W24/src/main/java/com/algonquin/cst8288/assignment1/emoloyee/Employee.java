@@ -10,6 +10,7 @@ public class Employee {
 	private double salary;
 	private int numberOfServiceYear;
 	private double bonus;
+	private double pension; 
 	private double totalCompensation;
 	private Date renewalDate;
 
@@ -76,6 +77,14 @@ public class Employee {
 
 	public void setBonus(double bonus) {
 		this.bonus = bonus;
+	}
+	
+	public double getPension() {
+		return pension;
+	}
+	
+	public double setPension(double pension) {
+		return pension;
 	}
 
 	public double getTotalCompensation() {
