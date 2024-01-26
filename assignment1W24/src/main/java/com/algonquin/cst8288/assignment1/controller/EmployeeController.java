@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.algonquin.cst8288.assignment1.emoloyee.ContractEmployeeImpl;
 import com.algonquin.cst8288.assignment1.emoloyee.Employee;
 import com.algonquin.cst8288.assignment1.emoloyee.EmployeeProcessor;
 import com.algonquin.cst8288.assignment1.emoloyee.EmployeeValidator;
@@ -33,10 +34,10 @@ public class EmployeeController {
 	        this.processor = processor;
 	    }
 
-	public String ControlEmployee(Employee employee) throws IOException {
+	public String ControlEmployee(Employee employee, ContractEmployeeImpl contract) throws IOException {
 
 		// Process data		
-		this.processor.processEmployeeData(employee);
+		this.processor.processEmployeeData(employee,contract);
 
 		
 		// Validate data

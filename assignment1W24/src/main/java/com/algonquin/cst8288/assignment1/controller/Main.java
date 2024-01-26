@@ -5,7 +5,10 @@ import java.io.IOException;
 
 import com.algonquin.cst8288.assignment1.emoloyee.ContractEmployeeImpl;
 import com.algonquin.cst8288.assignment1.emoloyee.Employee;
+import com.algonquin.cst8288.assignment1.emoloyee.EmployeeProcessor;
+import com.algonquin.cst8288.assignment1.emoloyee.EmployeeValidator;
 import com.algonquin.cst8288.assignment1.emoloyee.PermanentEmployeeImpl;
+import com.algonquin.cst8288.assignment1.persistence.PersistenceService;
 
 /**
  * 
@@ -23,15 +26,24 @@ public class Main {
 		Employee employee2 = new Employee("Daniel Buitrago", "danbuitragoto@unal.edu.co", "calle 45c # 19 -54", 23401.04, 6);
 
 		
-		ContractEmployeeImpl contract1 = new ContractEmployeeImpl(employee1);
-		PermanentEmployeeImpl permanent1 = new PermanentEmployeeImpl(employee2);
+		ContractEmployeeImpl contractemploy = new ContractEmployeeImpl();
+		PermanentEmployeeImpl permanentcontract = new PermanentEmployeeImpl();// corregir clase contratopermanente
+		
+		//todo
+		// crear objeto validador
+		// crear objeto data saver
+		// crear objeto procesador
+		
+		
+		
+		EmployeeController controlador = new EmployeeController(validator,  dataSaver,  processor);
+		
+		controlador.ControlEmployee(employee1, contractemploy); // que emepleado y que contrato
+		
+		
+		
 
-		 contract1.calculateTotalCompensation(employee1);
-		 contract1.renewalDate(employee1);
 		 
-		 permanent1.calculateBonus(employee2);
-		 permanent1.pensionContribution(employee2);
-		 permanent1.calculateTotalCompensation(employee2);
 
 
 		// String proccessEmployee(Employee employee) throws IOException {

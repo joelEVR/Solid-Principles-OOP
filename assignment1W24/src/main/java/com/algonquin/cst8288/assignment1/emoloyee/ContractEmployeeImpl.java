@@ -4,12 +4,11 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class ContractEmployeeImpl implements ContractEmployeeService {
+	
 
 	private Employee employee;
 	
-	public ContractEmployeeImpl(Employee employee) {
-		this.employee = employee;
-	}
+		
 	
 	@Override
 	public void calculateTotalCompensation(Employee employee) {
