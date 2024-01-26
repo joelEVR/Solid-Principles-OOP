@@ -26,7 +26,7 @@ public class EmployeeController {
 	private PersistenceService dataSaver;
 
 	 
-	 public EmployeeController(EmployeeValidator validator, PersistenceService dataSaver,EmployeeProcessor processor ) {
+	 public EmployeeController(EmployeeValidator validator, PersistenceService dataSaver) {
 	        this.validator = validator;
 	        this.dataSaver = dataSaver;
 	    }
