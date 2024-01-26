@@ -1,7 +1,5 @@
 package com.algonquin.cst8288.assignment1.emoloyee;
 
-import java.util.Date;
-
 import com.algonquin.cst8288.assignment1.controller.Rate;
 
 public class PermanentEmployeeImpl implements PermanentEmployeeService {
@@ -12,7 +10,7 @@ public class PermanentEmployeeImpl implements PermanentEmployeeService {
         this.employee = employee;
     }
 	
-    @override
+    @Override
 	public double calculateTotalCompensation(Employee employee) {
     	employee.setTotalCompensation(employee.getSalary() + employee.getBonus());
     	return employee.getTotalCompensation();

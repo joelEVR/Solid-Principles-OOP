@@ -13,10 +13,7 @@ public class Main {
 	
 	
 	public static void main(String[] args) throws IOException {
-		
-		
-		System.out.println("Hola mundo de perras luchonas que no saben usar git");
-		
+				
 		// Instantiate two Employee objects and use PermanentEmployeeService.java 
 		// and ContractEmployeeService.java to calculate and populate required data for objects
 		// Utilize EmployeeController.java to save both objects in JSON and Text formats, 
