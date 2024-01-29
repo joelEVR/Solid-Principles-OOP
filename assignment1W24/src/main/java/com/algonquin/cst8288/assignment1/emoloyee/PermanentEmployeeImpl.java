@@ -4,13 +4,16 @@ import com.algonquin.cst8288.assignment1.controller.Rate;
 
 public class PermanentEmployeeImpl extends Employee implements PermanentEmployeeService {
 	
+	public PermanentEmployeeImpl() {
+	}
+	
 	public PermanentEmployeeImpl(String string, String string2, String string3, double d, int i) {
 		super(string, string2, string3, d, i);
 	}
 
 	@Override
-	public void pensionContribution() {
-        this.setPension(this.getSalary() * Rate.PENSION_PERCENTAGE);
+	public double pensionContribution() {
+        return this.getSalary() * Rate.PENSION_PERCENTAGE;
 	}
 
 	@Override

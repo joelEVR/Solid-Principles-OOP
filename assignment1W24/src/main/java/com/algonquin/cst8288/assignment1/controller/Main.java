@@ -14,7 +14,6 @@ import com.algonquin.cst8288.assignment1.persistence.TextFormatter;
 
 public class Main {
 	
-	
 	public static void main(String[] args) throws IOException {
 				
 		/// Instanciar objetos Employee

@@ -73,13 +73,9 @@ public class Employee {
 	public void setBonus(double bonus) {
 		this.bonus = bonus;
 	}
-	
-	public double setPension(double pension) {
-		return pension;
-	}
 
 	public double getTotalCompensation() {
-		return totalCompensation;
+		return this.totalCompensation;
 	}
 
 	public void setTotalCompensation(double totalCompensation) {
