@@ -11,14 +11,17 @@ public class EmployeeValidator {
 	// Validates the Employee object
 		public boolean isValidEmployee(Employee employee) {
 			if (!isPresent(employee.getName())) {
+				System.out.println("FAILED FOR PRESENCE");
 				return false;
 			}
 			employee.setName(employee.getName().trim());
 
 			if (!isValidAlphaNumeric(employee.getName())) {
+				System.out.println("FAILED FOR NAME");
 				return false;
 			}
 			if (employee.getEmail() == null || employee.getEmail().trim().length() == 0) {
+				System.out.println("FAILED FOR EMAIL");
 				return false;
 			}
 			employee.setEmail(employee.getEmail().trim());
@@ -27,14 +30,17 @@ public class EmployeeValidator {
 			}
 			
 			if (!isNoSalary(employee.getSalary())) {
+				System.out.println("FAILED FOR SALARY");
 				return false;
 			}
 			
 			if (!isNoCompensation(employee.getTotalCompensation())) {
+				System.out.println("FAILED FOR COMPENSATION");
 				return false;
 			}
 			
 			if (!isNoServiceYear(employee.getNumberOfServiceYear())) {
+				System.out.println("FAILED FOR YEARS");
 				return false;
 			}
 			

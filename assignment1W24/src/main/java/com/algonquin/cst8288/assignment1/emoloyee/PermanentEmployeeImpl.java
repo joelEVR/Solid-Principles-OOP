@@ -5,7 +5,7 @@ import com.algonquin.cst8288.assignment1.controller.Rate;
 public class PermanentEmployeeImpl extends Employee implements PermanentEmployeeService {
 	
 	public PermanentEmployeeImpl(String string, String string2, String string3, double d, int i) {
-		super(string, string2, string3, d, i);// TODO Auto-generated constructor stub
+		super(string, string2, string3, d, i);
 	}
 
 	@Override

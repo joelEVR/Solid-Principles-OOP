@@ -1,0 +1,2 @@
+numberOfServiceYear=1, address=10 Rue Barrete Apt 3, bonus=292.51300000000003, total compensation=11993.033000000001, name=Joel, salary=11700.52, renewal date=null, email=vela0063@algonquinlive.com
+numberOfServiceYear=6, address=calle 45c # 19 -54, bonus=0.0, total compensation=23401.04, name=Daniel, salary=23401.04, renewal date=Tue Jan 28 21:27:18 EST 2025, email=danbuitragoto@unal.edu.co

@@ -5,7 +5,7 @@ import java.util.Calendar;
 public class ContractEmployeeImpl extends Employee implements ContractEmployeeService {	
 
 	public ContractEmployeeImpl(String string, String string2, String string3, double d, int i) {
-		super(string, string2, string3, d, i);// TODO Auto-generated constructor stub
+		super(string, string2, string3, d, i);
 	}
 	
 	@Override

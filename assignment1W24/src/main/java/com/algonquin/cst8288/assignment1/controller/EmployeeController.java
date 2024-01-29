@@ -1,11 +1,9 @@
 package com.algonquin.cst8288.assignment1.controller;
 
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.regex.Matcher;
 
 import com.algonquin.cst8288.assignment1.emoloyee.Employee;
+import com.algonquin.cst8288.assignment1.persistence.Formatter;
 import com.algonquin.cst8288.assignment1.persistence.PersistenceService;
 
 /**
@@ -18,31 +16,26 @@ public class EmployeeController {
 
 	private EmployeeValidator validator;
 	private PersistenceService dataSaver;
-	private EmployeeProcessor processor;
-
 	
-	 
-	 public EmployeeController(EmployeeValidator validator, PersistenceService dataSaver, EmployeeProcessor processor) {
-	        this.validator = validator;
-	        this.dataSaver = dataSaver;
-	        this.processor = processor;
+	 public EmployeeController(Formatter formatter) {
+	        this.dataSaver = new PersistenceService(formatter);
+	        this.validator = new EmployeeValidator();
 	    }
 
-	public String ControlEmployee() throws IOException {
+	public String processEmployee(Employee employee) throws IOException {
 
 		// Process data		
-		this.processor.processEmployeeData();
-
-		
 		// Validate data
-		if (!this.validator.isValidEmployee()) {
-			return "FALIED";
+		if (!this.validator.isValidEmployee(employee)) {
+			return "FAILED";
 		}
 		
-		// Store data
-		this.dataSaver.saveEmployee();
+		saveData(employee);
 		return "SUCCESS";
 	}
-
-		
+	
+	public void saveData(Employee employee) throws IOException {
+		// Store data
+		this.dataSaver.saveEmployee(employee);
+		}
 	}

@@ -23,9 +23,17 @@ public class PersistenceService {
      * @param filename
      * @throws IOException
      */
-    public void saveEmployee(Employee employee, String filename) throws IOException {
-        try (PrintWriter writer = new PrintWriter(new FileWriter(filename))) {
-            writer.println(this.formatter.format(employee));
+    public void saveEmployee(Employee employee) throws IOException {
+
+        String filename = "";
+        if (formatter instanceof TextFormatter) {
+            filename = "text_employee_data.txt";
+        } else if (formatter instanceof JSONFormatter) {
+                filename = "json_employee_data.json";
+        }
+
+        try (PrintWriter writer = new PrintWriter(new FileWriter(filename, true))) {
+            writer.println(formatter.format(employee));
             writer.flush();
         }
     }
