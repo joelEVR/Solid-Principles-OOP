@@ -2,26 +2,34 @@ package com.algonquin.cst8288.assignment1.emoloyee;
 
 import java.util.Calendar;
 
-public class ContractEmployeeImpl extends Employee implements ContractEmployeeService {	
+/**
+ * Implementation of a contract employee.
+ * Extends the base Employee class and implements ContractEmployeeService interface.
+ */
+public class ContractEmployeeImpl extends Employee implements ContractEmployeeService {    
 
-	public ContractEmployeeImpl() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public ContractEmployeeImpl(String string, String string2, String string3, double d, int i) {
-		super(string, string2, string3, d, i);
-	}
+    // Default constructor
+    public ContractEmployeeImpl() {
+        // Auto-generated constructor stub
+    }
+    
+    // Parameterized constructor to initialize a contract employee with specific attributes
+    public ContractEmployeeImpl(String name, String email, String address, double salary, int serviceYear) {
+        super(name, email, address, salary, serviceYear);
+    }
 
-	@Override
-	public void calculateTotalCompensation( ) {
+    // Calculate total compensation specific to contract employee
+    @Override
+    public void calculateTotalCompensation( ) {
         this.setTotalCompensation(this.getSalary());
-	}
+    }
 
-	@Override
-	public void renewalDate() {
-		Calendar calendar = Calendar.getInstance();
+    // Determine the renewal date for the contract employee (one year from the current date)
+    @Override
+    public void renewalDate() {
+        Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.YEAR, 1);
         this.setRenewalDate(calendar.getTime());
-	}
-	
+    }
+    
 }

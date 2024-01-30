@@ -2,8 +2,13 @@ package com.algonquin.cst8288.assignment1.emoloyee;
 
 import java.util.Date;
 
+/**
+ * Represents a general Employee in the system.
+ * This class serves as the base for different types of employees.
+ */
 public class Employee {
 
+    // Employee attributes
 	private String name;
 	private String email;
 	private String address;
@@ -13,10 +18,11 @@ public class Employee {
 	private double totalCompensation;
 	private Date renewalDate;
 
+	// Default constructor
 	public Employee() {
-		// Default constructor
 	}
 	
+    // Parameterized constructor for Employee initialization
 	public Employee(String name, String email, String address, double salary, int numberOfServiceYear) {
 		super();
 		this.name = name;
@@ -26,6 +32,7 @@ public class Employee {
 		this.numberOfServiceYear = numberOfServiceYear;
 	}
 
+	
 	public String getName() {
 		return name;
 	}
@@ -90,6 +97,7 @@ public class Employee {
 		this.renewalDate = renewalDate;
 	}
 
+    // Override toString for a readable representation of Employee
 	@Override
 	public String toString() {
 		return "Employee [name=" + name + ", email=" + email + ", address=" + address + ", salary=" + salary
