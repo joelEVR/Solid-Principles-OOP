@@ -35,7 +35,6 @@ public class EmployeeController {
 	}
 	
 	public void saveData(Employee employee) throws IOException {
-		// Store data
 		this.dataSaver.saveEmployee(employee);
 		}
 	}

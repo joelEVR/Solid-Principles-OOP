@@ -37,24 +37,26 @@ public class TestPersistanceService {
         // Limpieza
         Files.deleteIfExists(Paths.get(filename));
     }
+	
+	
+	@Test
+    public void testSaveEmployeeTextFormatter() throws Exception {
+        // Arrange
+        ContractEmployeeImpl contractEmployee = new ContractEmployeeImpl("Jeff", "Jeff@hotmail.com", "201 Nepean", 70000, 3);
+        PersistenceService service = new PersistenceService(new TextFormatter());
+        String filename = "text_employee_data.txt";
 
+        // Act
+        service.saveEmployee(contractEmployee);
 
-	/*
-	 * @Test public void testSaveEmployeeTextFormatter() throws Exception { //
-	 * Arrange ContractEmployeeImpl contractEmployee = new
-	 * ContractEmployeeImpl("Jeff", "Jeff@hotmail.com", "201 Nepean", 70000, 3);
-	 * EmployeeController employeeService = new EmployeeController(new
-	 * TextFormatter()); String filename = "text_employee.txt";
-	 * 
-	 * // Act employeeService.processEmployee(contractEmployee);
-	 * 
-	 * // Assert File file = new File(filename); assertTrue(file.exists());
-	 * 
-	 * // Opcional: Verificar que el archivo no está vacío assertTrue(file.length()
-	 * > 0);
-	 * 
-	 * // Limpieza Files.deleteIfExists(file.toPath()); }
-	 * 
-	 */
+        // Assert
+        assertTrue(Files.exists(Paths.get(filename)));
+
+        // Opcional: Verificar que el archivo no está vacío
+        assertTrue(Files.size(Paths.get(filename)) > 0);
+
+        // Limpieza
+        Files.deleteIfExists(Paths.get(filename));
+    }
   }
  
