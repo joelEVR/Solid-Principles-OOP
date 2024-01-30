@@ -6,8 +6,18 @@ import java.util.Map;
 
 import com.algonquin.cst8288.assignment1.emoloyee.Employee;
 
+/**
+ * Implementation of Formatter for text formatting.
+ * Converts Employee objects into a simple key-value pair string format.
+ */
 public class TextFormatter implements Formatter {
     
+	/**
+     * Formats an Employee object into a text-based key-value representation.
+     * @param employee The Employee object to format.
+     * @return A String containing the Employee's attributes in key-value format.
+     * @throws IOException If an error occurs during formatting.
+     */
     @Override
     public String format(Employee employee) throws IOException {
         if (employee == null) {
@@ -15,8 +25,7 @@ public class TextFormatter implements Formatter {
         }
 
         Map<String, String> keyValueMap = new HashMap<>();
-        
-        // Agregar pares clave-valor al mapa
+        // Populate the map with employee attributes
         keyValueMap.put("name", employee.getName());
         keyValueMap.put("email", employee.getEmail());
         keyValueMap.put("address", employee.getAddress());
@@ -26,7 +35,7 @@ public class TextFormatter implements Formatter {
         keyValueMap.put("total compensation", String.valueOf(employee.getTotalCompensation()));
         keyValueMap.put("renewal date", String.valueOf(employee.getRenewalDate()));
 
-        // Construir la cadena de salida
+        // Build the output string
         StringBuilder formattedText = new StringBuilder();
         for (Map.Entry<String, String> entry : keyValueMap.entrySet()) {
             String key = entry.getKey();
@@ -34,7 +43,7 @@ public class TextFormatter implements Formatter {
             formattedText.append(key).append("=").append(value).append(", ");
         }
         
-        // Eliminar la coma y el espacio en blanco adicionales al final
+        // Remove the trailing comma and space
         if (formattedText.length() > 2) {
             formattedText.setLength(formattedText.length() - 2);
         }

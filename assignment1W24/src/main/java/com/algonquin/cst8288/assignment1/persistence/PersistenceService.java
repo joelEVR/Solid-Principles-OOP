@@ -11,7 +11,7 @@ public class PersistenceService {
 
     private Formatter formatter;
 
-    // Constructor que inyecta la dependencia
+    // Parameterized constructor for initializing a PersistenceService with a Formatter like attribute
     public PersistenceService(Formatter formatter) {
         this.formatter = formatter;
     }
