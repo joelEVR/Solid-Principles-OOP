@@ -12,7 +12,7 @@ import com.algonquin.cst8288.assignment1.emoloyee.ContractEmployeeImpl;
  */
 public class TestContractEmployeeImpl {
 
-    ContractEmployeeImpl employee = new ContractEmployeeImpl();
+	ContractEmployeeImpl employee = new ContractEmployeeImpl();
 
     /**
      * Test for calculateTotalCompensation method.

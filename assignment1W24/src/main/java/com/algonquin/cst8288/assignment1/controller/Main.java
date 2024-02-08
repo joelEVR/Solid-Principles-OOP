@@ -1,8 +1,15 @@
+/**
+ * Author: Joel Esteban Velasquez Rodriguez, 041092394
+ * Course: CST8288 – OOP with Design Patterns
+ * Assignment: Assignment 1
+ * Date: 29 Jan 2024
+ */
+
+
 package com.algonquin.cst8288.assignment1.controller;
 
 import java.io.IOException;
 import com.algonquin.cst8288.assignment1.emoloyee.ContractEmployeeImpl;
-import com.algonquin.cst8288.assignment1.emoloyee.Employee;
 import com.algonquin.cst8288.assignment1.emoloyee.PermanentEmployeeImpl;
 import com.algonquin.cst8288.assignment1.persistence.JSONFormatter;
 import com.algonquin.cst8288.assignment1.persistence.TextFormatter;
@@ -33,15 +40,15 @@ public class Main {
 		EmployeeController textEmployeeController = new EmployeeController(new TextFormatter());
 	
         // Instantiate EmployeeController with JSONFormatter
-		System.out.println("Permanent Employee JSON Format: ");
+		System.out.println("Permanent Employee Saved in JSON Format: ");
         System.out.println(jsonEmployeeController.processEmployee(permanentEmployee));
-        System.out.println("Contract Employee JSON Format: ");
+        System.out.println("Contract Employee Saved in JSON Format: ");
         System.out.println(jsonEmployeeController.processEmployee(contractEmployee));
 
         // Instantiate EmployeeController with TextFormatter
-        System.out.println("Permanent Employee Text Format: ");
+        System.out.println("Permanent Employee Saved in Text Format: ");
         System.out.println(textEmployeeController.processEmployee(permanentEmployee));
-        System.out.println("Contract Employee Text Format: ");
+        System.out.println("Contract Employee Saved in Text Format: ");
         System.out.println(textEmployeeController.processEmployee(contractEmployee));	
 	    
         

@@ -8,7 +8,7 @@ import java.util.Calendar;
  */
 public class ContractEmployeeImpl extends Employee implements ContractEmployeeService {    
 
-    // Default constructor
+	 // Default constructor
     public ContractEmployeeImpl() {
         // Auto-generated constructor stub
     }
